@@ -5,3 +5,4 @@ _site
 vendor
 .idea
 *.iml
+node_modules
