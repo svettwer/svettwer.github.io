@@ -1,16 +1,12 @@
-name: Jekyll site CI
+name: Release my website <3
 
 on:
   push:
-    branches: [ master ]
-  pull_request:
     branches: [ develop ]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v2
     - name: Build the site in the jekyll/builder container
@@ -18,3 +14,13 @@ jobs:
         docker run \
         -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
         jekyll/builder:latest /bin/bash -c "chmod 777 /srv/jekyll && jekyll build --future"
+    - name: Commit files
+      run: |
+        git config --local user.email "sven.hettwer@web.de"
+        git config --local user.name "svettwer"
+        git commit -m "New website release <3" -a
+    - name: Push changes
+      uses: ad-m/github-push-action@v0.5.0
+      with:
+        branch: master
+        github_token: ${{ secrets.GITHUB_TOKEN }}
