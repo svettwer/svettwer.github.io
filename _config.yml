@@ -8,10 +8,10 @@ url: "https://svettwer.github.io" # the base hostname & protocol for your site e
 username: Sven Hettwer
 user_title: Software Engineer
 email: sven.hettwer@web.de
-twitter_username: SvenHettwer
-github_username:  svettwer
-twitch_username:  svettwer
-youtube_channel:  https://www.youtube.com/channel/UCC4ivZkPVDyFeuq_UgF2WsQ
+twitter_url: https://twitter.com/SvenHettwer
+github_url: https://github.com/svettwer
+twitch_url: https://twitch.com/svettwer
+youtube_url:  https://www.youtube.com/channel/UCC4ivZkPVDyFeuq_UgF2WsQ
 
 # Google-analytics
 google-analytics:
